@@ -10,7 +10,7 @@ II. CHỨC NĂNG
   1. Trang đăng nhập
       - Đăng nhập vào trang đăng ký hcoj
   2. Trang chủ
-      - Đăng ký học : đk môn học , xoá môn học , chuyển  môn học cho nhau,
+      - Đăng ký học : đk môn học , xoá môn học, chuyển  môn học cho nhau,
   3. Trang quản trị
       - Đẩy môn học lên trang đăng ký 
       - Xoá môn học sinh viên đăng ký
