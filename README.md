@@ -10,6 +10,7 @@ II. NỘI DUNG - CHỨC NĂNG
   1. Trang đăng nhập
       Nội dung :  + đăng nhập vào đăng ký môn học 
                   + giới thiệu qua về đk học
-                  + ...
+                  + 
+      Chức năng
+  2. Trang chủ
 
-ok bạn
