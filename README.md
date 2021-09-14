@@ -6,12 +6,14 @@ I. TRANG
   3. Trang quản trị
   4. ...
 
-II. NỘI DUNG - CHỨC NĂNG
+II. CHỨC NĂNG
   1. Trang đăng nhập
-      Nội dung :  + đăng nhập vào đăng ký môn học 
-                  + giới thiệu qua về đk học
-                  + 
-      Chức năng
+      - Đăng nhập vào trang đăng ký hcoj
   2. Trang chủ
-      Nội dung : 
+      - Đăng ký học : đk môn học , xoá môn học , chuyển  môn học cho nhau,
+  3. Trang quản trị
+      - Đẩy môn học lên trang đăng ký 
+      - Xoá môn học sinh viên đăng ký
+      - Hiện thị môn học sinh viện đk nhưng không được học
+      - Sửa môn của sinh viên
 
