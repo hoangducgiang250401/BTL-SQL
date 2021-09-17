@@ -1,11 +1,17 @@
 body {
     margin: unset;
 }
-
 :root {
     --color-header : #F8EFBA;
     --color-text-header: #00803d;
+    --color-banner : #55E6C1;
 }
+/* * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+} 
+*/
 .text-pop-up-top {
     color: #fed330;
 	-webkit-animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both;
