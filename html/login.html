@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập hệ thống đăng ký học</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/fontawesome-free-5.15.4-web/css/all.css">
+</head>
+<body>
+    <div class="main-login">
+        <form class="form-login">
+            <h1 class="form-heading">Đăng nhập</h1>
+            <div class="form-group">
+                <label class="control-label">Tên truy cập</label>
+                <i class="far fa-user"></i>
+                <input type="text" id="username" class="form-input" placeholder="Tên đăng nhập" >
+                <p class="user_er"> Vui lòng nhập tên truy cập!</p>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Mật khẩu</label>
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password_login" class="form-input" placeholder="Mật khẩu">
+                <p class="pass_er"> Vui lòng nhập mật khẩu!</p>
+            </div>
+            <hr class="hr-normal">
+            <div class="row">
+                <div class="reset">
+                    <a href="#" target="_blank" rel="noopener noreferrer">Quên mật khẩu?</a>
+                </div>
+                <div class="summit">
+                    <button type="submit" class="form-summit">Đăng nhập</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $('#username').keyup(function(){
+            var user = $('#username').val();
+            if ( user == '') {
+                $('.user_er').slideDown(0)
+                return false;
+            } else {
+                $('.user_er').slideUp(0)
+                return  false;
+            }
+        })
+        $('#password_login').keyup(function(){
+            var user = $('#password_login').val();
+            if ( user == '') {
+                $('.pass_er').slideDown(0)
+                return false;
+            } else {
+                $('.pass_er').slideUp(0)
+                return  false;
+            }
+        })
+        $('.form-summit').click(function(){
+            var user = $('#username').val();
+            if ( user == '') {
+                $('.user_er').slideDown(0)
+                return false;
+            } else {
+                $('.user_er').slideUp(0)
+                return  false;
+            }
+        })
+        $('.form-summit').click(function(){
+            var pass = $('#password_login').val();
+            if ( pass == '') {
+                $('.pass_er').slideDown(0)
+                return false;
+            } else {
+                $('.pass_er').slideUp(0)
+                return  false;
+            }
+        })
+    </script>
+</body>
+</html>
