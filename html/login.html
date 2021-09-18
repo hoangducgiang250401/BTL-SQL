@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/fontawesome-free-5.15.4-web/css/all.css">
 </head>
 <body>
     <div class="main-login">
@@ -32,5 +33,48 @@
             </div>
         </form>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $('#username').keyup(function(){
+            var user = $('#username').val();
+            if ( user == '') {
+                $('.user_er').slideDown(0)
+                return false;
+            } else {
+                $('.user_er').slideUp(0)
+                return  false;
+            }
+        })
+        $('#password_login').keyup(function(){
+            var user = $('#password_login').val();
+            if ( user == '') {
+                $('.pass_er').slideDown(0)
+                return false;
+            } else {
+                $('.pass_er').slideUp(0)
+                return  false;
+            }
+        })
+        $('.form-summit').click(function(){
+            var user = $('#username').val();
+            if ( user == '') {
+                $('.user_er').slideDown(0)
+                return false;
+            } else {
+                $('.user_er').slideUp(0)
+                return  false;
+            }
+        })
+        $('.form-summit').click(function(){
+            var pass = $('#password_login').val();
+            if ( pass == '') {
+                $('.pass_er').slideDown(0)
+                return false;
+            } else {
+                $('.pass_er').slideUp(0)
+                return  false;
+            }
+        })
+    </script>
 </body>
 </html>
