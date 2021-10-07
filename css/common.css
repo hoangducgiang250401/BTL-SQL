@@ -1,5 +1,6 @@
 body {
     margin: unset;
+    /* font-family: Arial; */
 }
 :root {
     --color-header : #F8EFBA;
