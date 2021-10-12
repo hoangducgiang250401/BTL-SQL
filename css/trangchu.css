@@ -45,7 +45,7 @@
     flex-direction: column;
     width: 100%;
     align-items: center;
-    /* background-color: azure; */
+
 }
 
 .vnu {
@@ -77,27 +77,12 @@
 
 .view_container {
     width: 97%;
-    height: 635px;
     background-color: white;
     margin: 0px auto;
     border-radius: 5px;
-    /* border: 2px solid black; */
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    box-shadow: 0px 10px 70px grey;
 }
-
-
-/* .thanh_thong_tin {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 30px;
-    margin-top: 20px;
-
-background-color: aqua;
-border-radius: 5px 5px 0px 0px;
-
-}
-*/ 
+ 
 .header_mon {
     width: 100%;
     list-style: none;
@@ -108,10 +93,7 @@ border-radius: 5px 5px 0px 0px;
     text-align: center;
     padding: 6px 0px;
 }
-.header_mon:last-child {
-    border-right: none;
-    margin-right: 10px;
-}
+
 .list_mon {
     width: 100%;
     height: 575px;
@@ -127,7 +109,7 @@ border-radius: 5px 5px 0px 0px;
 }
 .box_right {
     width: 97%;
-    margin: auto;
+    margin: 30px auto;
 }
 .list_course {
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
