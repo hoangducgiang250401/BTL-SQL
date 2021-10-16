@@ -1,0 +1,15 @@
+.input-student {
+    background-color: cadetblue;
+    width: 300px;
+    padding: 20px;
+}
+.input-lecturers {
+    background-color: beige;
+    width: 300px;
+    padding: 20px;
+}
+.input-subject {
+    background-color: blue;
+    width: 300px;
+    padding: 20px;
+}
