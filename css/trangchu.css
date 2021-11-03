@@ -195,6 +195,10 @@ table {
     background-color: #49BF67;
 }
 
+.center{
+    text-align: center;
+}
+
 #ck {
     width: 10px;
 }
