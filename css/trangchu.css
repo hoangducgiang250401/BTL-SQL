@@ -1,7 +1,12 @@
+/* top bar */
+.top_bar{
+    height: 30px;
+    background-color: #485460;
+}
+/* header */
 .box_header {
     width: 100%;
     height: 100px;
-    background-color: var(--color-header);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,15 +16,17 @@
     width: 250px;
 }
 
-.header {
-    font-size: 12px;
+.title {
+    font-size: 25px;
+    font-weight: 700;
     color: var(--color-text-header);
 }
 
-.login button {
-    border-radius: unset;
+.user button {
+    border-radius: 5px;
+    height: 30px;
     border-color: var(--color-text-header);
-    margin-right: 30px;
+    margin: 0px 80px;
     color: white;
     background-color: var(--color-text-header);
 }
@@ -27,31 +34,19 @@
 /* menu */
 
 /* banner */
-
+.banner {
+    margin: 20px 0px;
+}
 /* main*/
-
+    /* main body */
+.main_body{
+    width: 80%;
+    margin: 20px auto;
+}
 .main {
     min-height: 100%;
     width: 100%;
     height: auto;
-}
-
-#main-nav-bg {
-    margin-top: 100px;
-    width: 251px;
-    background-color: green;
-    position: absolute;
-    float: left;
-    border-right: 1px solid #ddd;
-    background: #f4f4f4;
-    display: block;
-    z-index: -1;
-    top: 0;
-    bottom: 0;
-}
-
-#content {
-    margin-left: 251px;
 }
 
 .box_left {

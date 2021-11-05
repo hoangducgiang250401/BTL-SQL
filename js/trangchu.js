@@ -3,28 +3,20 @@ $(document).ready(function () {
   $(".credis").append(registered);
 
   $(".checkbox").click(function (e) {
-      var mon = [];
-      input = $(this).parents().eq(1).find("td");
-      $(input).each(function (index, value) {
-        mon.push($(value).text());
-      });
+    var mon = [];
+    input = $(this).parents().eq(1).find("td");
+    $(input).each(function (index, value) {
+      mon.push($(value).text());
+    });
     if ($(this).prop("checked")) {
       add_new(mon);
-    }
-    else{
-        drop_registered(mon);
+    } else {
+      drop_registered(mon);
     }
   });
-$('.trash').click(function (e) { 
-    e.preventDefault();
-    console.log('giang');
-});
-$('.trash').on('click', function () {
-    console.log(this);
-});
-$(document).on('click', '.trash', function() {
-    $(this).closest('tr').remove();
-})
+  $(document).on("click", ".trash", function () {
+    $(this).closest("tr").remove();
+  });
 });
 
 function add_new(mon) {
@@ -42,7 +34,7 @@ function add_new(mon) {
     <td>" +
       mon[6] +
       "</td>\
-    <td>" +
+    <td class = 'center'>" +
       mon[2] +
       "</td>\
     <td>" +
@@ -62,7 +54,4 @@ function add_new(mon) {
   registered += 1;
   $(".credis").text(registered);
 }
-function drop_registered(mon){
-    
-}
-// console.log(this);
+function drop_registered(mon) {}
