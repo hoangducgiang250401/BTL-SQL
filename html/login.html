@@ -6,40 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập hệ thống đăng ký học</title>
-    <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/login.css">
-    <link rel="stylesheet" href="/fontawesome-free-5.15.4-web/css/all.css">
+
+    <link href="http://fonts.googleapis.com/css?family=Lato:100italic,100,300italic,300,400italic,400,700italic,700,900italic,900" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="/assets/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="/assets/css/styles.css" />
 </head>
 
 <body>
-    <div class="main-login">
-        <form class="form-login" id="form-login">
-            <h1 class="form-heading">Đăng nhập</h1>
-            <div class="form-group">
-                <label class="control-label">Tên truy cập</label>
-                <i class="fas fa-key"></i>
-                <input type="text" class="form-input" id="username" name="username" placeholder="Tên đăng nhập">
-                <span class="user_er">Vui lòng nhập tên truy cập!</span>
-            </div>
-            <div class="form-group">
-                <label class="control-label">Mật khẩu</label>
-                <i class="fas fa-user"></i>
-                <input type="password" class="form-input" id="password" name="password" placeholder="Mật khẩu">
-                <span class="pass_er">Vui lòng nhập mật khẩu!</span>
-            </div>
-            <hr class="hr-normal">
-            <div class="row">
-                <div class="reset">
-                    <a href="#" target="_blank" rel="noopener noreferrer">Quên mật khẩu?</a>
+    <section class="container">
+        <section class="login-form">
+            <form method="post" action="" role="login">
+                <section>
+                    <h2>Please sign in</h2>
+                    <div class="form-group">
+                        <div class="input-group">
+                              <div class="input-group-addon"><span class="text-primary glyphicon glyphicon-envelope"></span></div>
+                            <input type="email" name="email" placeholder="Email" required class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                              <div class="input-group-addon"><span class="text-primary glyphicon glyphicon-lock"></span></div>
+                            <input type="password" name="password" placeholder="Password" required class="form-control" />
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="checkbox" name="remember" value="1" /> Remember me
+                    </div>
+                    
+                    <button type="submit" name="go" class="btn btn-block btn-success">Sign in</button>
+                </section>
+                <div>
+                    <a href="#">Forgot password ?</a>
                 </div>
-                <div class="summit">
-                    <button type="submit" class="form-summit" onclick="">Đăng nhập</button>
-                </div>
-            </div>
-        </form>
-    </div>
-    <script src="/lib/jquery-3.6.0.min.js"></script>
-    <script src="/js/login.js"></script>
+            </form>
+        </section>
+</section>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>
