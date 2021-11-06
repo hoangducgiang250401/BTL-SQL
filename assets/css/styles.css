@@ -7,13 +7,16 @@
 	outline: none;
 }
 body {
-	background: url(../images/bg.jpg) no-repeat center center fixed;
+	background: url(/img/bg.jpg) no-repeat center center fixed;
+	background-color: rgb(154, 170, 153);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
-
+section>h2{
+	text-align: center;
+}
 .login-form {
 	margin: 100px auto;
 	max-width: 400px;
