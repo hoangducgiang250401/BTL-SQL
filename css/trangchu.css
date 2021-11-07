@@ -26,6 +26,14 @@
     border-color: #00803d !important;
 }
 /* start header */
+.fex{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+}
+.main_box{
+    margin-top: 135px;
+}
 .top_bar{
     height: 30px;
     background-color: #485460;
@@ -109,3 +117,14 @@
 .fas{
     cursor: pointer;
 }
+
+/* start footer */
+.backtop {
+    background-color: white;
+    border-radius: 50%;
+    color: #00803d;
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+}
+/* end footer */
