@@ -57,14 +57,29 @@ $(document).ready(function () {
       changed();
     }
   });
+  $(window).scroll(function () {
+    if ($(this).scrollTop()) {
+      $(".backtop").fadeIn()
+    }
+    else {
+      $(".backtop").fadeOut()
+    }
+  });
+  $(document).on("click", ".backtop", function () {
+    console.log("goi");
+    $('html,body').animate({scrollTop: 0 },500);
+  });
   changed();
 });
+
+
+// =================================================================
 // thay đổi số tín số môn khi đã thêm hoặc xoá môn
-function changed(){
+function changed() {
   var total_subjects = $('.registered>tbody').find('tr').length;
   var total_credis = 0;
   var sb = $('.registered>tbody').find('tr');
-  $(sb).each(function(index,value){
+  $(sb).each(function (index, value) {
     var credis = $(value).find('td');
     total_credis += Number($(credis[1]).text());
   });

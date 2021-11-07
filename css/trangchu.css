@@ -44,8 +44,20 @@
 
 
 /* start header */
+<<<<<<< HEAD
 
 .top_bar {
+=======
+.fex{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+}
+.main_box{
+    margin-top: 135px;
+}
+.top_bar{
+>>>>>>> 0e1ae3939d830bfd3492b82140904f4a25b8e07d
     height: 30px;
     background-color: #485460;
     color: white;
@@ -146,3 +158,14 @@
 .fas {
     cursor: pointer;
 }
+
+/* start footer */
+.backtop {
+    background-color: white;
+    border-radius: 50%;
+    color: #00803d;
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+}
+/* end footer */
