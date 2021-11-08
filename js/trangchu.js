@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+  var user = 0;
   $('.filterable .btn-filter').click(function () {
     var $panel = $(this).parents('.filterable'),
       $filters = $panel.find('.filters input'),
@@ -66,15 +66,30 @@ $(document).ready(function () {
     }
   });
   $(document).on("click", ".backtop", function () {
-    console.log("goi");
     $('html,body').animate({scrollTop: 0 },500);
   });
-  changed();
+  $(document).on("click", ".user>button", function () {
+    if(user == 0){
+      $(".info_user").fadeIn();
+      user = 1
+    }else{
+      $(".info_user").fadeOut()
+      user = 0;
+    }
+  });
+  $(document).on("click", ".sign_out", function () {
+    window.location.replace("/html/login.html");
+  });
+  default_setting();
 });
 
 
 // =================================================================
 // thay đổi số tín số môn khi đã thêm hoặc xoá môn
+function default_setting(){
+  changed();
+  check_data();
+}
 function changed() {
   var total_subjects = $('.registered>tbody').find('tr').length;
   var total_credis = 0;
@@ -104,4 +119,16 @@ function add_subject(mon) {
     <td class="column2"><i class="fas fa-trash" style="color: #00803d;"></i></td>\
     </tr>'
   );
+}
+
+function check_data(){
+  $('.list_subject>tbody').find('tr').each(function(index,value){
+    var td = $(this).find('td')
+    var max = $(td[5]).text();
+    var min = $(td[6]).text()
+    if(max <= min){
+      $(td[0]).find("input").addClass('cam');
+      $(this).addClass('full_slot');
+    }
+  })
 }
