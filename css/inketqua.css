@@ -1,49 +1,6 @@
-.list_subject tbody {
-    display: block;
-    max-height: 200px;
-    overflow-y: auto;
+body {
+    font-family: 'Times New Roman', Arial;
 }
-
-.list_subject tr {
-    display: block;
-}
-
-.filterable {
-    margin-top: 15px;
-}
-
-.filterable .panel-heading .pull-right {
-    margin-top: -20px;
-}
-
-.filterable .filters input[disabled] {
-    background-color: transparent;
-    border: none;
-    cursor: auto;
-    box-shadow: none;
-    padding: 0;
-    height: auto;
-}
-
-.filterable .filters input[disabled]::-webkit-input-placeholder {
-    color: #333;
-}
-
-.filterable .filters input[disabled]::-moz-placeholder {
-    color: #333;
-}
-
-.filterable .filters input[disabled]:-ms-input-placeholder {
-    color: #333;
-}
-
-.panel-heading {
-    background-color: #00803d !important;
-    border-color: #00803d !important;
-}
-
-
-/* start header */
 
 .fex {
     position: fixed;
@@ -90,94 +47,6 @@
     margin: 0px 80px;
     color: white;
     background-color: #00803d;
-}
-
-
-/* end header */
-
-.column0 {
-    width: 2%;
-}
-
-.column1 {
-    width: 18%;
-}
-
-.column2 {
-    width: 8%;
-}
-
-.column3 {
-    width: 11%;
-}
-
-.column4 {
-    width: 8%;
-}
-
-.column5 {
-    width: 7%;
-}
-
-.column6 {
-    width: 17%;
-}
-
-.column7 {
-    width: 9%;
-}
-
-.column8 {
-    width: 15%;
-}
-
-.column9 {
-    width: 5%;
-}
-
-.form-control {
-    padding: 6px 2px !important;
-}
-
-.panel-primary {
-    border-color: #00803d;
-}
-
-.ph_flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.submition {
-    border-radius: 4px;
-}
-
-.fas {
-    cursor: pointer;
-}
-
-
-/* start footer */
-
-.backtop {
-    background-color: white;
-    border-radius: 50%;
-    color: #00803d;
-    position: fixed;
-    bottom: 40px;
-    right: 20px;
-}
-
-
-/* end footer */
-
-.cam {
-    cursor: not-allowed;
-}
-
-.full_slot {
-    background-color: rgb(200, 198, 202);
 }
 
 .info_user {
@@ -244,4 +113,19 @@
 .user_items:hover {
     background-color: #f1f5f2;
     cursor: pointer;
+}
+
+.print_area,
+.btn_print {
+    margin-top: 135px;
+    margin-left: 280px;
+}
+
+#btnExport {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(1, 147, 245);
+    color: white;
+    padding: 8px 16px;
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 20%), 0 1px 2px rgb(0 0 0 / 5%);
+    border: none;
 }
