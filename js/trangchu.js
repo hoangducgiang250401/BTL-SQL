@@ -47,8 +47,9 @@ $(document).ready(function () {
   });
   //select subject
   $(".choose").click(function (e) {
-    e.preventDefault();
-    if ($(this).find('input').prop("checked")) {
+    // e.preventDefault();
+    if ($(this).find('input').prop("checked")==true) {
+      console.log($(this).find('input').prop("checked"));
       var mon = [];
       var data = $(this).closest('tr').data()
       mon.push(data.id_sj);
