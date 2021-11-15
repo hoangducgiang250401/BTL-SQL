@@ -40,15 +40,18 @@ $(document).ready(function () {
       $table.find('tbody').prepend($('<tr class="no-result text-center"><td colspan="' + $table.find('.filters th').length + '">No result found</td></tr>'));
     }
   });
-  // xoá môn học
+  // delete subject
   $(document).on("click", ".fa-trash", function () {
     $(this).closest("tr").remove();
     changed();
   });
-  //chọn môn học
+  //select subject
   $(".choose").click(function (e) {
+    e.preventDefault();
     if ($(this).find('input').prop("checked")) {
       var mon = [];
+      var data = $(this).closest('tr').data()
+      mon.push(data.id_sj);
       input = $(this).closest('tr').find("td");
       $(input).each(function (index, value) {
         mon.push($(value).text());
@@ -66,13 +69,13 @@ $(document).ready(function () {
     }
   });
   $(document).on("click", ".backtop", function () {
-    $('html,body').animate({scrollTop: 0 },500);
+    $('html,body').animate({ scrollTop: 0 }, 500);
   });
   $(document).on("click", ".user>button", function () {
-    if(user == 0){
+    if (user == 0) {
       $(".info_user").fadeIn();
       user = 1
-    }else{
+    } else {
       $(".info_user").fadeOut()
       user = 0;
     }
@@ -83,10 +86,9 @@ $(document).ready(function () {
   default_setting();
 });
 
-
 // =================================================================
 // thay đổi số tín số môn khi đã thêm hoặc xoá môn
-function default_setting(){
+function default_setting() {
   changed();
   check_data();
 }
@@ -104,29 +106,28 @@ function changed() {
 
 //thêm môn học
 function add_subject(mon) {
-  console.log("goi");
   if (mon[8] == "") {
     mon[8] = "lần đầu";
   }
   $(".registered>tbody").append(
-    '<tr>\
-    <td class="">'+ mon[2] + '</td>\
-    <td class="column4">'+ mon[3] + '</td>\
-    <td class="column3">'+ mon[4] + '</td>\
-    <td class="">'+ mon[7] + '</td>\
-    <td class="">'+ mon[8] + '</td>\
-    <td class="">'+ mon[9] + '</td>\
-    <td class="column2"><i class="fas fa-trash" style="color: #00803d;"></i></td>\
+    '<tr data-id_sj = "' + mon[0] + '">\
+      <td class="">'+ mon[3] + '</td>\
+      <td class="column4">'+ mon[4] + '</td>\
+      <td class="column3">'+ mon[5] + '</td>\
+      <td class="">'+ mon[8] + '</td>\
+      <td class="">'+ mon[9] + '</td>\
+      <td class="">'+ mon[10] + '</td>\
+      <td class="column2"><i class="fas fa-trash" style="color: #00803d;"></i></td>\
     </tr>'
   );
 }
 
-function check_data(){
-  $('.list_subject>tbody').find('tr').each(function(index,value){
+function check_data() {
+  $('.list_subject>tbody').find('tr').each(function (index, value) {
     var td = $(this).find('td')
     var max = $(td[5]).text();
     var min = $(td[6]).text()
-    if(max <= min){
+    if (max <= min) {
       $(td[0]).find("input").addClass('cam');
       $(this).addClass('full_slot');
     }

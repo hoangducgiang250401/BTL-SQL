@@ -1,10 +1,10 @@
-.list tbody {
+.list_subject tbody {
     display: block;
     max-height: 200px;
     overflow-y: auto;
 }
 
-.list tr {
+.list_subject tr {
     display: block;
 }
 
