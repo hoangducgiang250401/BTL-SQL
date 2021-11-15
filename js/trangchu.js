@@ -92,6 +92,7 @@ function default_setting() {
   changed();
   check_data();
 }
+
 function changed() {
   var total_subjects = $('.registered>tbody').find('tr').length;
   var total_credis = 0;
