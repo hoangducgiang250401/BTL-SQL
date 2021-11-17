@@ -1,7 +1,9 @@
 body {
     font-family: 'Times New Roman', Arial;
 }
-
+.logo{
+    cursor: pointer;
+}
 .fex {
     position: fixed;
     width: 100%;

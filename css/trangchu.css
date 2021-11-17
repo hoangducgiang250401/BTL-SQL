@@ -44,7 +44,9 @@
 
 
 /* start header */
-
+.logo{
+    cursor: pointer;
+}
 .fex {
     position: fixed;
     width: 100%;

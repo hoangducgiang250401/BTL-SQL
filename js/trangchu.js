@@ -83,6 +83,9 @@ $(document).ready(function() {
     $(document).on("click", ".sign_out", function() {
         window.location.replace("/html/login.html");
     });
+    $(document).on("click", ".printRegister", function() {
+        window.location.replace("/html/indangkyhoc.html");
+    });
     default_setting();
 });
 
