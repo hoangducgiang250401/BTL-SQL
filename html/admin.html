@@ -1,70 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/admin.css">
-    <link rel="stylesheet" href="/css/common.css">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <title>Trang quan tri</title>
 </head>
-<body>
-    <div class="input-student"> <!-- đưa dữ liệu sinh viên lên web-->
-        <form>
-            <h3>nhập thông tin sinh viên</h3>
-            <label for="fname">id sinh viên</label><br>
-            <input type="text"><br>
-            <label for="lname">tên đầy đủ sinh viên</label><br>
-            <input type="text"><br>
-            <label for="fname">lớp</label><br>
-            <input type="text"><br>
-            <label for="fname">ngày tháng năm sinh</label><br>
-            <input type="text"><br>
-            <label for="fname">có thuộc diện khó khăn không (1:0)</label><br>
-            <input type="text"><br>
-            <label for="fname">quê quán</label><br>
-            <input type="text"><br>
-            <input type="submit" value="Submit">
-          </form>
-    </div>
-    <div class="input-lecturers"> <!-- đưa dữ liệu giảng viên lên web-->
-        <form>
-            <h3>nhập thông tin giảng viên</h3>
-            <label for="fname">id giảng viên</label><br>
-            <input type="text"><br>
-            <label for="lname">tên đầy đủ giảng viên</label><br>
-            <input type="text"><br>
-            <label for="fname">ngày tháng năm sinh</label><br>
-            <input type="text"><br>
-            <label for="fname">trình độ</label><br>
-            <input type="text"><br>
-            <label for="fname">đang làm việc không</label><br>
-            <input type="text"><br>
-            <label for="fname">quê quán</label><br>
-            <input type="text"><br>
-            <input type="submit" value="Submit">
-          </form>
-    </div>
-    <div class="input-subject"> <!-- đưa dữ liệu môn học lên web-->
-        <form>
-            <h3>nhập thông tin môn học</h3>
-            <label for="fname">id môn học</label><br>
-            <input type="text"><br>
-            <label for="lname">tên môn học</label><br>
-            <input type="text"><br>
-            <label for="fname">phòng học</label><br>
-            <input type="text"><br>
-            <label for="fname">thứ học</label><br>
-            <input type="text"><br>
-            <label for="fname">tiết học</label><br>
-            <input type="text"><br>
-            <label for="fname">tín chỉ</label><br>
-            <input type="text"><br>
-            <label for="fname">id giảng viên</label><br>
-            <input type="text"><br>
-            <input type="submit" value="Submit">
-          </form>
-    </div>
 
+<body>
+
+    <div class="box_body">
+        <div class="box_submition">
+            <div class="form_input">
+                <form action="/dangkyhoc/api-insert_student" method="POST">
+                    <h3>ADD STUDENT</h3>
+                    <label for="fname">ID:</label>
+                    <input type="text" name="id_sd"><br>
+                    <label for="lname">Full name:</label>
+                    <input type="text" name="fullname"><br>
+                    <label for="fname">Class:</label>
+                    <input type="text" name="course"><br>
+                    <label for="fname">Birthday:</label>
+                    <input type="text" name="dateofbirth" placeholder="year-month-date"><br>
+                    <label for="fname">Difficult:</label>
+                    <input type="text" name="disadvantaged" placeholder="1 or 0"><br>
+                    <label for="fname">Village:</label>
+                    <input type="text" name="birthplace"><br>
+                    <label for="fname">IsAdmin:</label>
+                    <input type="text" name="isadmin" placeholder="1 or 0"><br>
+                    <input type="submit" value="ADD">
+                </form>
+            </div>
+            <div class="form_input">
+                <form>
+                    <h3>ADD LECTURERS</h3>
+                    <label for="fname">ID:</label>
+                    <input type="text"><br>
+                    <label for="lname">Full name</label>
+                    <input type="text"><br>
+                    <label for="fname">Birthday:</label>
+                    <input type="text" placeholder="year-month-date"><br>
+                    <label for="fname">Lever:</label>
+                    <input type="text"><br>
+                    <label for="fname">Working:</label>
+                    <input type="text" placeholder="1 or 0"><br>
+                    <label for="fname">Village:</label>
+                    <input type="text"><br>
+                    <input type="submit" value="ADD">
+                </form>
+            </div>
+
+        </div>
+        <div class="box_submition">
+            <div class="form_input">
+                <form action="/dangkyhoc/api-insert_subject" method="POST">
+                    <h3>ADD SUBJECT</h3>
+                    <label for="fname">IdSubject</label>
+                    <input type="text" name="id_sj"><br>
+                    <label for="lname">Subject name</label>
+                    <input type="text" name="subjectname"><br>
+                    <label for="fname">Credis</label>
+                    <input type="text" name="credis"><br>
+                    <label for="fname">Class name</label>
+                    <input type="text" name="classname"><br>
+                    <label for="fname">Maximum</label>
+                    <input type="text" name="maxsd"><br>
+                    <label for="fname">Day</label>
+                    <input type="text" name="thu"><br>
+                    <label for="fname">Period</label>
+                    <input type="text" name="period"><br>
+                    <label for="fname">Room</label>
+                    <input type="text" name="room"><br>
+                    <label for="fname">IdLecturers</label>
+                    <input type="text" name="id_lt"><br>
+                    <input type="submit" value="ADD">
+                </form>
+            </div>
+            <div class="form_input">
+                <form action="export-data" method="POST">
+                    <h3>GET REGISTRATION</h3>
+                    <input type="submit" value="update registed" />
+                </form>
+                <a href="${pageContext.request.contextPath}/file/file.xlsx" download>download file registed</a>
+            </div>
+            <div class="form_input">
+                <form action="OffRegister" method="POST">
+                    <h3>ON/OFF REGISTER</h3>
+                    <label for="fname">ON/OFF:</label>
+                    <input type="submit" value="ON" id="OnOff"/>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            // console.log("giang");
+            $(document).on("click", "#OnOff", function (e) {
+                e.preventDefault();
+                if($(this).val() == "ON"){
+                    $(this).val("OFF");
+                }
+                else{
+                    $(this).val("ON");
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>

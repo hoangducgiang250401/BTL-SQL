@@ -1,6 +1,6 @@
 .list_subject tbody {
     display: block;
-    max-height: 200px;
+    max-height: 500px;
     overflow-y: auto;
 }
 
@@ -244,4 +244,14 @@
 .user_items:hover {
     background-color: #f1f5f2;
     cursor: pointer;
+}
+.footer_box{
+    margin-top: 20px;
+    background-color: #485460;
+}
+.content_footer{
+    display: block;
+    padding: 30px;
+    color: white;
+    line-height: 30px;
 }

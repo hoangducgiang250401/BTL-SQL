@@ -1,15 +1,33 @@
-.input-student {
-    background-color: cadetblue;
-    width: 300px;
-    padding: 20px;
+.box_body{
+    width: 70%;
+    margin: 0px auto;
+    display: flex;
+    background-color: tomato;
+    justify-content: space-around;
 }
-.input-lecturers {
-    background-color: beige;
-    width: 300px;
+.form_input{
+    background-color: rgb(226, 236, 236);
+    border-radius: 10px;
+    width: 310px;
+    height: fit-content;
     padding: 20px;
+    line-height: 30px;
+    margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
-.input-subject {
-    background-color: blue;
-    width: 300px;
-    padding: 20px;
+.form_input label{
+    display: inline-block;
+    width: 90px;
 }
+.form_input h3 {
+    text-align: center;
+}
+.box_submition{
+    display: flex;
+    flex-direction: column;
+}
+#OnOff{
+    
+}
+
+
