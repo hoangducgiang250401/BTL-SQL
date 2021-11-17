@@ -250,10 +250,19 @@
 .footer_box{
     margin-top: 20px;
     background-color: #485460;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
 }
 .content_footer{
     display: block;
     padding: 30px;
     color: white;
     line-height: 30px;
+}
+.offRegister{
+    text-align: center;
+    margin-top: 250px;
+    color: red;
+    font-weight: 800;
 }
