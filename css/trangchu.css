@@ -250,7 +250,7 @@
 .footer_box{
     margin-top: 20px;
     background-color: #485460;
-    position: fixed;
+    position: relative;
     bottom: 0px;
     width: 100%;
 }
