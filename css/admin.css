@@ -7,7 +7,7 @@ body{
     margin: 0px auto;
     margin-top: 70px;
     display: flex;
-    background-color: tomato;
+    background-color: rgb(165, 201, 173);
     justify-content: space-around;
 }
 .form_input{

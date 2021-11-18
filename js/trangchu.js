@@ -86,9 +86,6 @@ $(document).ready(function() {
     $(document).on("click", ".printRegister", function() {
         window.location.replace("/html/indangkyhoc.html");
     });
-    $(document).on("click", ".logo", function() {
-        window.location.replace("/html/trangchu.html");
-    });
     default_setting();
 });
 

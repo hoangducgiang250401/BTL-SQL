@@ -16,10 +16,15 @@ $(document).ready(function() {
             }
         });
     });
-    $(document).on("click", ".sign_out,.logo", function() {
+    $(document).on("click", ".sign_out", function() {
+        console.log("gínout");
         window.location.replace("/html/login.html");
     });
     $(document).on("click", ".printRegister", function() {
         window.location.replace("/html/indangkyhoc.html");
+    });
+    
+    $(document).on("click", ".logo", function() {
+        window.location.replace("/html/trangchu.html");
     });
 })

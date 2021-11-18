@@ -119,8 +119,8 @@ body {
 
 .print_area,
 .btn_print {
+    margin: 0px 50px;
     margin-top: 135px;
-    margin-left: 280px;
 }
 
 #btnExport {
