@@ -173,11 +173,6 @@
 
 
 /* end footer */
-
-.cam {
-    cursor: not-allowed;
-}
-
 .full_slot {
     background-color: rgb(200, 198, 202);
 }
@@ -248,7 +243,7 @@
     cursor: pointer;
 }
 .footer_box{
-    margin-top: 20px;
+    /* margin-top: 20px; */
     background-color: #485460;
     position: relative;
     bottom: 0px;

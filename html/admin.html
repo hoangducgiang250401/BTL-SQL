@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="/css/admin.css">
     <link rel="stylesheet" href="/fontawesome-free-5.15.4-web/css/all.css">
     <link rel="stylesheet" href="/css/trangchu.css">
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="/js/trangchu.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/admin/css/style.css">
     <title>Trang quan tri</title>
 </head>
 
@@ -45,102 +47,232 @@
             </div>
         </div>
     </div>
-    <div class="box_body">
-        <div class="box_submition">
-            <div class="form_input">
-                <form action="/dangkyhoc/api-insert_student" method="POST">
-                    <h3>ADD STUDENT</h3>
-                    <label for="fname">ID:</label>
-                    <input type="text" name="id_sd"><br>
-                    <label for="lname">Full name:</label>
-                    <input type="text" name="fullname"><br>
-                    <label for="fname">Class:</label>
-                    <input type="text" name="course"><br>
-                    <label for="fname">Birthday:</label>
-                    <input type="text" name="dateofbirth" placeholder="year-month-date"><br>
-                    <label for="fname">Difficult:</label>
-                    <input type="text" name="disadvantaged" placeholder="1 or 0"><br>
-                    <label for="fname">Village:</label>
-                    <input type="text" name="birthplace"><br>
-                    <label for="fname">IsAdmin:</label>
-                    <input type="text" name="isadmin" placeholder="1 or 0"><br>
-                    <input type="submit" value="ADD">
-                </form>
+    <!-- end header -->
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="custom-menu">
+                <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                    <i class="fa fa-bars"></i>
+                    <span class="sr-only">Toggle Menu</span>
+                </button>
             </div>
-            <div class="form_input">
-                <form>
-                    <h3>ADD LECTURERS</h3>
-                    <label for="fname">ID:</label>
-                    <input type="text"><br>
-                    <label for="lname">Full name</label>
-                    <input type="text"><br>
-                    <label for="fname">Birthday:</label>
-                    <input type="text" placeholder="year-month-date"><br>
-                    <label for="fname">Lever:</label>
-                    <input type="text"><br>
-                    <label for="fname">Working:</label>
-                    <input type="text" placeholder="1 or 0"><br>
-                    <label for="fname">Village:</label>
-                    <input type="text"><br>
-                    <input type="submit" value="ADD">
-                </form>
+            <div class="p-4 pt-5">
+                <h1><a href="/html/admin.html" class="logo">VNU</a> </h1>
+                <ul class="list-unstyled components mb-5">
+                    <li class="active tablinks1">
+                        <a href="#">NHẬP THÔNG TIN</a>
+                    </li>
+                    <li class="active">
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">IN
+                            ĐĂNG KÝ</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li class="tablinks2">
+                                <a href="#">Toàn trường</a>
+                            </li>
+                            <li class="tablinks3">
+                                <a href="#">Lớp</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Page Content  -->
+
+
+        <div id="" class="p-4 p-md-5 pt-5 content1">
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+            </label>
+            <div class="contentTabs1">
+                <div class="box_body">
+                    <div class="form_input">
+                        <form action="/dangkyhoc/api-insert_student" method="POST">
+                            <h3>ADD STUDENT</h3>
+                            <label for="fname">ID:</label>
+                            <input type="text" name="id_sd" autocomplete="off"><br>
+                            <label for="lname">Full name:</label>
+                            <input type="text" name="fullname" autocomplete="off"><br>
+                            <label for="fname">Class:</label>
+                            <input type="text" name="course" autocomplete="off"><br>
+                            <label for="fname">Birthday:</label>
+                            <input type="text" name="dateofbirth" placeholder="year-month-date" autocomplete="off"><br>
+                            <label for="fname">Difficult:</label>
+                            <input type="text" name="disadvantaged" placeholder="1 or 0" autocomplete="off"><br>
+                            <label for="fname">Village:</label>
+                            <input type="text" name="birthplace" autocomplete="off"><br>
+                            <label for="fname">IsAdmin:</label>
+                            <input type="text" name="isadmin" placeholder="1 or 0" autocomplete="off"><br>
+                            <input class="send" type="submit" value="ADD">
+                        </form>
+                    </div>
+                    <div class="form_input">
+                        <form>
+                            <h3>ADD LECTURERS</h3>
+                            <label for="fname">ID:</label>
+                            <input type="text" autocomplete="off"><br>
+                            <label for="lname">Full name</label>
+                            <input type="text" autocomplete="off"><br>
+                            <label for="fname">Birthday:</label>
+                            <input type="text" placeholder="year-month-date" autocomplete="off"><br>
+                            <label for="fname">Lever:</label>
+                            <input type="text" autocomplete="off"><br>
+                            <label for="fname">Working:</label>
+                            <input type="text" placeholder="1 or 0" autocomplete="off"><br>
+                            <label for="fname">Village:</label>
+                            <input type="text" autocomplete="off"><br>
+                            <input class="send" type="submit" value="ADD">
+                        </form>
+                    </div>
+                    <div class="form_input">
+                        <form action="/dangkyhoc/api-insert_subject" method="POST">
+                            <h3>ADD SUBJECT</h3>
+                            <label for="fname">IdSubject</label>
+                            <input type="text" name="id_sj" autocomplete="off"><br>
+                            <label for="lname">Subject name</label>
+                            <input type="text" name="subjectname" autocomplete="off"><br>
+                            <label for="fname">Credis</label>
+                            <input type="text" name="credis" autocomplete="off"><br>
+                            <label for="fname">Class name</label>
+                            <input type="text" name="classname" autocomplete="off"><br>
+                            <label for="fname">Maximum</label>
+                            <input type="text" name="maxsd" autocomplete="off"><br>
+                            <label for="fname">Day</label>
+                            <input type="text" name="thu" autocomplete="off"><br>
+                            <label for="fname">Period</label>
+                            <input type="text" name="period" autocomplete="off"><br>
+                            <label for="fname">Room</label>
+                            <input type="text" name="room" autocomplete="off"><br>
+                            <label for="fname">IdLecturers</label>
+                            <input type="text" name="id_lt" autocomplete="off"><br>
+                            <input class="send" type="submit" value="ADD">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="contentTabs2">
+                <!-- <div>
+                    <form action="">
+                        <input type="submit" name="" id="" value="tìm kiếm" class="searchRegister"> <input type="text"
+                            autocomplete="off">
+                    </form>
+                </div> -->
+                <div class="tableRegister">
+
+                    <table>
+                        <h5>DANH SÁCH SINH VIÊN TOÀN TRƯỜNG</h5>
+                        <thead>
+                            <th style="text-align: center;">STT</th>
+                            <th>Mã sinh viên</th>
+                            <th>Tên môn học</th>
+                            <th>Tín chỉ</th>
+                            <th>Mã lớp học</th>
+                            <th>giảng viên</th>
+                            <th>Trạng thái</th>
+                            <th>Lịch học</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="text-align: center;">1</td>
+                                <td>19020270</td>
+                                <td>hệ quản trị cơ sở dữ liệu</td>
+                                <td>3</td>
+                                <td>3306 1</td>
+                                <td>nguyễn thị hậu</td>
+                                <td>đăng ký lần đầu</td>
+                                <td>t4 (7-8) pm201</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="contentTabs3">
+
+                <div class="tableRegister">
+
+                    <table>
+                        <h5>DANH SÁCH HỌC VIÊN LỚP : </h5>
+                        <h6>Giảng viên: Nguyễn Thị Hậu</h6>
+                        <h6>Môn : hệ quản trị cơ sow dữ liệu</h6>
+                        <thead>
+                            <th style="text-align: center;">STT</th>
+                            <th>Mã sinh viên</th>
+                            <th>Họ tên</th>
+                            <th>Ngày sinh</th>
+                            <th>Lớp</th>
+                            <th>Trạng thái</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="text-align: center;">1</td>
+                                <td>19020270</td>
+                                <td>Hoàng Đức Giang</td>
+                                <td>25-04-2001</td>
+                                <td>K64-CF</td>
+                                <td>đăng ký lần đầu</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
-        </div>
-        <div class="box_submition">
-            <div class="form_input">
-                <form action="/dangkyhoc/api-insert_subject" method="POST">
-                    <h3>ADD SUBJECT</h3>
-                    <label for="fname">IdSubject</label>
-                    <input type="text" name="id_sj"><br>
-                    <label for="lname">Subject name</label>
-                    <input type="text" name="subjectname"><br>
-                    <label for="fname">Credis</label>
-                    <input type="text" name="credis"><br>
-                    <label for="fname">Class name</label>
-                    <input type="text" name="classname"><br>
-                    <label for="fname">Maximum</label>
-                    <input type="text" name="maxsd"><br>
-                    <label for="fname">Day</label>
-                    <input type="text" name="thu"><br>
-                    <label for="fname">Period</label>
-                    <input type="text" name="period"><br>
-                    <label for="fname">Room</label>
-                    <input type="text" name="room"><br>
-                    <label for="fname">IdLecturers</label>
-                    <input type="text" name="id_lt"><br>
-                    <input type="submit" value="ADD">
-                </form>
-            </div>
-            <div class="form_input">
-                <form action="export-data" method="POST">
-                    <h3>GET REGISTRATION</h3>
-                    <input type="submit" value="update registed" />
-                </form>
-                <a href="${pageContext.request.contextPath}/file/file.xlsx" download>download file registed</a>
-            </div>
-            <div class="form_input">
-                <form action="OffRegister" method="POST">
-                    <h3>ON/OFF REGISTER</h3>
-                    <label for="fname">ON/OFF:</label>
-                    <input type="submit" value="ON" id="OnOff"/>
-                </form>
-            </div>
 
         </div>
     </div>
+    <!-- foooter -->
+    <div class="footer_box">
+        <div class="content_footer">
+            <p>
+                © 2017 Trường Đại học Công nghệ, Đại học Quốc Gia Hà Nội
+                <br>Địa chỉ: E3, 144 Xuân Thủy, Cầu Giấy, Hà Nội
+                <br>Điện thoại: 024.37547.461; Fax: 024.37547.460; Email: uet@vnu.edu.vn
+            </p>
+        </div>
+    </div>
+    <div class="backtop">
+        <i class="fas fa-arrow-alt-circle-up fa-3x"></i>
+    </div>
+
+    <script src="/assets/admin/js/jquery.min.js"></script>
+    <script src="/assets/admin/js/popper.js"></script>
+    <script src="/assets/admin/js/bootstrap.min.js"></script>
+    <script src="/assets/admin/js/main.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="/js/trangchu.js"></script>
     <script>
         $(document).ready(function () {
+            $(".contentTabs2").hide()
+            $(".contentTabs3").hide()
             $(document).on("click", "#OnOff", function (e) {
                 e.preventDefault();
-                if($(this).val() == "ON"){
+                if ($(this).val() == "ON") {
                     $(this).val("OFF");
                 }
-                else{
+                else {
                     $(this).val("ON");
                 }
             });
+            $(document).on("click", ".tablinks1", function (e) {
+                $(".contentTabs1").show();
+                $(".contentTabs2").hide();
+                $(".contentTabs3").hide();
+            });
+            $(document).on("click", ".tablinks2", function (e) {
+                $(".contentTabs2").show();
+                $(".contentTabs1").hide();
+                $(".contentTabs3").hide();
+            });
+            $(document).on("click", ".tablinks3", function (e) {
+                $(".contentTabs3").show();
+                $(".contentTabs1").hide();
+                $(".contentTabs2").hide();
+            });
         });
+
     </script>
 </body>
 
